@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <section class="challenge-11">
+      <div class="card">
+        <div class="menue-side">
+          <div class="step step-one active">
+            <h1>1</h1>
+            <div>
+              <p>Step 1</p>
+              <h3>Your info</h3>
+            </div>
+          </div>
+          <div class="step step-two ">
+            <h1>2</h1>
+            <div>
+              <p>Step 2</p>
+              <h3>Select Plan</h3>
+            </div>
+          </div>
+          <div class="step step-three ">
+            <h1>3</h1>
+            <div>
+              <p>Step 3</p>
+              <h3>Add-ons</h3>
+            </div>
+          </div>
+          <div class="step step-foure">
+            <h1>4</h1>
+            <div>
+              <p>Step 4</p>
+              <h3>Summary</h3>
+            </div>
+          </div>
+        </div>
+        <div class="form-side">
+          <div class="slider slide-1 active">
+            <h1>Personal info</h1>
+            <p>
+              Please provide your name, email address, and phone number.
+            </p>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="e.g. Stephen King" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Adress</label>
+                <input type="text" id="email"
+                  placeholder=" e.g. stephenking@lorem.com" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone"
+                  placeholder="e.g. +1 234 567 890" />
+              </div>
+            </form>
+          </div>
+          <div class="slider slide-2 ">
+            <h1>Select your plan</h1>
+            <p>
+              You have the option of monthly or yearly billing.
+            </p>
+            <div class="plan-cards">
+              <div class="item-card selected" data-card=0>
+                <img src="assets/images/icon-arcade.svg" alt="sjh" />
+                <div class="description month">
+                  <h5>Arcade</h5>
+                  <p>$9/mo</p>
+                </div>
+                <div class="description years">
+                  <h5>Arcade</h5>
+                  <p>$90/yr</p>
+                  <h6>2 months free</h6>
+                </div>
+              </div>
+              <div class="item-card" data-card=1>
+                <img src="assets/images/icon-advanced.svg" alt="sjh" />
+                <div class="description month">
+                  <h5>Advanced</h5>
+                  <p>$12/mo</p>
+                </div>
+                <div class="description years">
+                  <h5>Advanced</h5>
+                  <p>$120/yr</p>
+                  <h6>2 months free</h6>
+                </div>
+              </div>
+              <div class="item-card" data-card=2>
+                <img src="assets/images/icon-pro.svg" alt="sjh" />
+                <div class="description month">
+                  <h5>Pro</h5>
+                  <p>$15/mo</p>
+                </div>
+                <div class="description years">
+                  <h5>Pro</h5>
+                  <p>$150/yr</p>
+                  <h6>2 months free</h6>
+                </div>
+              </div>
+            </div>
+            <div class="plan-calc">
+              <span class="plan-selected">Monthly</span>
+              <lable class="toggle-btn">
+                <input type="checkbox" id="plan-checkbox" name="checkbox" />
+                <span class="slider-toggle"></span>
+              </lable>
+              <span>Yearly</span>
+            </div>
+          </div>
+          <div class="slider slide-3 ">
+            <h1>Pick add-ons</h1>
+            <p>
+              Add-ons help enhance your gaming experience.
+            </p>
+            <div class="pick-add-ons-cards">
+              <div class="pick-add-item-card ">
+                <div class="card-checkbox">
+                  <input type="checkbox" name="plan_checkbox">
+                  <div class="description">
+                    <h4>
+                      Online service
+                    </h4>
+                    <p> Access to multiplayer games</p>
+                  </div>
+                </div>
+                <p class="card-price">+$1/mo</p>
+              </div>
+              <div class="pick-add-item-card ">
+                <div class="card-checkbox">
+                  <input type="checkbox" name="plan_checkbox">
+                  <div class="description">
+                    <h4>
+                      Larger storage
+                    </h4>
+                    <p> Extra 1TB of cloud save</p>
+                  </div>
+                </div>
+                <p class="card-price">+$2/mo</p>
+              </div>
+              <div class="pick-add-item-card">
+                <div class="card-checkbox">
+                  <input type="checkbox" name="plan_checkbox">
+                  <div class="description">
+                    <h4>
+                      Customizable Profile
+                    </h4>
+                    <p> Custom theme on your profile</p>
+                  </div>
+                </div>
+                <p class="card-price">+$2/mo</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider slide-4 ">
+            <h1>Finishing up</h1>
+            <p>
+              Double-check everything looks OK before confirming.
+            </p>
+
+            <div class="finishing-card">
+              <div class="slescted-plan">
+                <div class="mine-plan">
+                  <h3>Arcade (Monthly)</h3>
+                  <a href="#">Change</a>
+                </div>
+                <p>$9/mo</p>
+              </div>
+              <div class="options-selected">
+                <p>Online services</p>
+                <span>+$1/mo</span>
+              </div>
+              <div class="options-selected">
+                <p>Large stroage</p>
+                <span>+$2/mo</span>
+              </div>
+            </div>
+            <div class="totale">
+              <p>Total (per month/year)</p>
+              <span>+$12/mo</span>
+            </div>
+
+          </div>
+          <div class="slider slide-5">
+            <div class="thank-slide">
+              <img src="assets/images/icon-thank-you.svg" alt="thanks" />
+              <h3>Thank you!</h3>
+              <p>
+                Thanks for confirming your subscription! We hope you have fun
+                using our platform. If you ever need support, please feel free
+                to email us at support@loremgaming.com.
+              </p>
+            </div>
+          </div>
+          <div class="btns">
+            <button class="btn btn-back" id="btn-back">Go Back</button>
+            <button class="btn btn-next" id="btn-next">Next Step</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

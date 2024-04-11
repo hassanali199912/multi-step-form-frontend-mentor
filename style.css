@@ -1,0 +1,643 @@
+@font-face {
+    font-family: "Ubuntu", sans-serif;
+    src: url('https://fonts.google.com/specimen/Ubuntu');
+}
+
+:root {
+
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Marine-blue-light: hsl(213, 73%, 32%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+
+
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+    --black: hsla(0, 0%, 0%, 0.652);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.challenge-11 {
+    background-color: var(--Magnolia);
+    font-size: 16px;
+    color: var(--Cool-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.challenge-11 .card {
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 800px;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+
+}
+
+/*===========================
+    menue Side
+=============================*/
+.challenge-11 .card .menue-side {
+    background-color: var(--White);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+    width: 100%;
+    flex-basis: 40%;
+    background-image: url('./assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    color: var(--White);
+}
+
+.challenge-11 .card .menue-side .step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.challenge-11 .card .menue-side .step h1 {
+    width: 20px;
+    height: 20px;
+    padding: 1rem;
+    border: 1px solid var(--Cool-gray);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Alabaster);
+}
+
+.challenge-11 .card .menue-side .step.active h1 {
+
+    border: 1px solid var(--Light-blue);
+    color: var(--black);
+    background-color: var(--Light-blue);
+}
+
+.challenge-11 .card .menue-side .step div p {
+    color: var(--Light-gray);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.challenge-11 .card .menue-side .step div h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+}
+
+
+
+.challenge-11 .card .form-side {
+    width: 100%;
+    padding: 3rem 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.challenge-11 .card .form-side .slider {
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+
+.challenge-11 .card .form-side .slider.active {
+    display: block;
+    opacity: 1;
+
+}
+
+
+/*Slider one*/
+
+.challenge-11 .card .form-side .slider h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--Marine-blue);
+    margin-bottom: 1rem;
+}
+
+.challenge-11 .card .form-side .slider p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--Cool-gray);
+    margin-bottom: 1rem;
+}
+
+.challenge-11 .card .form-side .slide-1 form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.challenge-11 .card .form-side .slide-1 form .form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--Marine-blue);
+    font-weight: 600;
+}
+
+.challenge-11 .card .form-side .slide-1 form .form-group input {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid var(--Cool-gray);
+    color: var(--Marine-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
+
+}
+
+.challenge-11 .card .form-side .slide-1 form .form-group input:focus {
+    outline: none;
+    border-color: var(--Marine-blue);
+}
+
+
+
+
+
+/*Slider two*/
+
+
+
+.challenge-11 .card .form-side .slider .plan-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card {
+    border: 1px solid var(--Cool-gray);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 0px var(--black);
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card:hover {
+    border-color: var(--Purplish-blue);
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card.selected {
+    border-color: var(--Purplish-blue);
+    background-color: var(--Alabaster);
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card img {
+    width: 40px;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card .description h5 {
+    color: var(--Marine-blue);
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card .description p {
+    color: var(--Light-gray);
+    font-size: 0.7rem;
+    font-family: 700;
+    padding: 0.4rem 0;
+    margin: 0;
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card .description h6 {
+    padding: 0 0 0.5rem 0;
+    color: var(--Marine-blue-light);
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card .description.month {
+    display: block;
+}
+
+.challenge-11 .card .form-side .slider .plan-cards .item-card .description.years {
+    display: none;
+}
+
+.challenge-11 .card .form-side .slider .plan-calc {
+    background-color: var(--Alabaster);
+    padding: 0.6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}
+
+
+
+.challenge-11 .card .form-side .slider .plan-calc .toggle-btn {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.challenge-11 .card .form-side .slider .plan-calc .toggle-btn input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.challenge-11 .card .form-side .slider .plan-calc .toggle-btn .slider-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Marine-blue);
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.challenge-11 .card .form-side .slider .plan-calc .toggle-btn .slider-toggle::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--White);
+    border-radius: 50%;
+    transition: 0.4s;
+    z-index: 2;
+}
+
+.challenge-11 .card .form-side .slider .plan-calc .toggle-btn input:checked+.slider-toggle::before {
+    -webkit-transform: translate(30px, -50%);
+    -ms-transform: translate(30px, -50%);
+    transform: translate(30px, -50%);
+}
+
+.challenge-11 .card .form-side .slider .plan-calc span.plan-selected {
+    color: var(--Marine-blue);
+    font-weight: 600;
+}
+
+
+
+/*Slider three*/
+.challenge-11 .card .form-side .slider .pick-add-ons-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.challenge-11 .card .form-side .slider .pick-add-item-card {
+    display: flex;
+    background-color: transparent;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--Cool-gray);
+}
+
+.challenge-11 .card .form-side .slider .pick-add-item-card.selected {
+    background-color: var(--Alabaster);
+    border: 1px solid var(--Purplish-blue);
+}
+
+.challenge-11 .card .form-side .slider .pick-add-item-card p {
+    margin: 0;
+}
+
+.challenge-11 .card .form-side .slider .pick-add-item-card .card-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.challenge-11 .card .form-side .slider .pick-add-item-card .card-checkbox .description h4 {
+    font-weight: 600;
+    color: var(--Marine-blue-light);
+    margin-bottom: 0.2rem;
+}
+
+.challenge-11 .card .form-side .slider .pick-add-item-card .card-price {
+    color: var(--Purplish-blue);
+}
+
+
+.challenge-11 .card .form-side .slider .pick-add-item-card .card-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+
+}
+
+.challenge-11 .card .form-side .slider .pick-add-item-card .card-checkbox input[type="checkbox"]:checked {
+    appearance: none;
+    color: var(--Purplish-blue) !important;
+    background-color: var(--Purplish-blue);
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+
+}
+
+
+
+
+/*Slider Foure*/
+.challenge-11 .card .form-side .slider .finishing-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Alabaster);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.challenge-11 .card .form-side .slider .finishing-card .slescted-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.challenge-11 .card .form-side .slider .finishing-card .slescted-plan h3 {
+    color: var(--Marine-blue-light);
+    padding-bottom: 0.5rem;
+}
+
+.challenge-11 .card .form-side .slider .finishing-card .slescted-plan .mine-plan a {
+    color: var(--Cool-gray);
+}
+
+.challenge-11 .card .form-side .slider .finishing-card .slescted-plan p {
+    color: var(--Marine-blue-light);
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.challenge-11 .card .form-side .slider .finishing-card .slescted-plan {
+    border-bottom: 2px solid var(--Cool-gray);
+    margin-bottom: 1rem;
+
+}
+
+.challenge-11 .card .form-side .slider .finishing-card .options-selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.challenge-11 .card .form-side .slider .finishing-card .options-selected span {
+    color: var(--Marine-blue-light);
+}
+
+.challenge-11 .card .form-side .slider .finishing-card .options-selected p {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.challenge-11 .card .form-side .slider .totale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.challenge-11 .card .form-side .slider .totale p {
+    padding: 0;
+    margin: 0;
+}
+
+.challenge-11 .card .form-side .slider .totale span {
+    color: var(--Purplish-blue);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/*Slider five*/
+
+.challenge-11 .card .form-side .slide-5.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.challenge-11 .card .form-side .slide-5.active .thank-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -10%);
+}
+
+.challenge-11 .card .form-side .slide-5.active .thank-slide img {
+    width: 70px;
+}
+
+.challenge-11 .card .form-side .slide-5.active .thank-slide h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--Marine-blue);
+    padding-top: 1rem;
+
+}
+
+.challenge-11 .card .form-side .slide-5.active .thank-slide p {
+    line-height: 1.8;
+    padding: 0 1.2rem;
+
+}
+
+/*Next and Previous btn*/
+
+.challenge-11 .card .form-side .btns {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.challenge-11 .card .form-side .btns button {
+    padding: 0.8rem 2rem;
+    background-color: var(--Marine-blue);
+    color: var(--White);
+    border-radius: 10px;
+    border-color: transparent;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.challenge-11 .card .form-side .btns button:hover {
+
+    background-color: var(--Marine-blue-light);
+}
+
+.challenge-11 .card .form-side .btns .btn-back {
+    background-color: transparent;
+    color: var(--black);
+    font-weight: 600;
+    visibility: hidden;
+    transition: none;
+
+}
+
+.challenge-11 .card .form-side .btns .btn-back:hover {
+    color: var(--Marine-blue);
+    background-color: transparent;
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:791px) {
+
+    /*===========================
+    menue Side
+=============================*/
+
+    .challenge-11 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .challenge-11 .card {
+        box-shadow: none;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        padding: 0;
+        background-color: transparent;
+
+    }
+
+
+    .challenge-11 .card .menue-side {
+        background-color: var(--White);
+        border-radius: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        flex-basis: 40%;
+        background-image: url('./assets/images/bg-sidebar-mobile.svg');
+        gap: 1rem !important;
+    }
+
+    .challenge-11 .card .menue-side .step div {
+        display: none;
+    }
+
+    .challenge-11 .card .form-side {
+        height: 100%;
+        padding: 1rem 2rem;
+    }
+
+    .challenge-11 .card .form-side .slider {
+        background-color: var(--White);
+        padding: 2rem 3rem;
+        border-radius: 10px;
+        position: relative;
+        top: -70px;
+    }
+
+    .challenge-11 .card .form-side .btns {
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        left: 0;
+        padding: 2rem;
+        margin: 0;
+        background-color: var(--White);
+
+    }
+
+    .challenge-11 .card .form-side .slide-5.active .thank-slide {
+        top: 0;
+        padding: 3rem 0 0 0;
+    }
+
+
+    .challenge-11 .card .form-side .slider .plan-cards {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .challenge-11 .card .form-side .slider .plan-cards .item-card {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .challenge-11 .card .form-side .slider .plan-cards .item-card img {
+        width: 40px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+
+
+}
